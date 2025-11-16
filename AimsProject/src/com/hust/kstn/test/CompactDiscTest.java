@@ -6,7 +6,7 @@ import java.util.List;
 import com.hust.kstn.models.*;
 
 
-public class Test {
+public class CompactDiscTest {
     public static void main(String[] args) {
         BookAuthor artist1 = new BookAuthor("Taylor Swift", 1989, "American singer-songwriter");
         BookAuthor artist2 = new BookAuthor("Ariana Grande", 1993, "American pop star");
@@ -36,13 +36,16 @@ public class Test {
         System.out.println("=== CD INFORMATION ===");
         System.out.println(cd);
 
-        System.out.println("\n=== PLAY CD ===");
+        System.out.println("=== PLAY CD ===");
         cd.playDemoCD();
 
         Track newTrack = new Track("New Release", 200);
         cd.addTrack(newTrack);
 
         System.out.println("\nAfter adding new track:");
+        System.out.println("Total length: " + cd.totalLength());
+
+        cd.removeTrack(t2);
         System.out.println("Total length: " + cd.totalLength());
     }
 }

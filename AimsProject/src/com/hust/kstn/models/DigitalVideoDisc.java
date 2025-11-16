@@ -96,7 +96,11 @@ public class DigitalVideoDisc {
     }
 
     public void previewDemoDVD() {
-        // TODO
+        if(this.length <= 0) System.out.println("Error, cannot play this DVD");
+        else {
+            System.out.println("DVD title: " + this.title);
+            System.out.println("DVD length: " + this.length);
+        }
     }
 
 
