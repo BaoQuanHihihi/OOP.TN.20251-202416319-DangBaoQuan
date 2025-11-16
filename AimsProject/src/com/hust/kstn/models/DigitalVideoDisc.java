@@ -116,4 +116,14 @@ public class DigitalVideoDisc {
             category.equalsIgnoreCase(other.category) &&
             director.equalsIgnoreCase(other.director);
     }
+
+    @Override
+    public String toString() {
+        return "DVD" + "[" + this.id + "]"
+        + "[" + this.title + "]"
+        + "[" + this.cost + "]"
+        + "[" + this.director + "]"
+        + "[" + this.length + "]"
+        + "[" + this.category + "]";
+    }
 }

@@ -28,16 +28,6 @@ public class Cart {
         } else System.out.println("Cannot add DVD: quantity = " + qtyOrdered);
     }
 
-    // public void addDVD(DigitalVideoDisc[] discs) {
-    //     if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
-    //         for(int i = 0; i < discs.length; i++) {
-    //             itemsInCart[qtyOrdered + i] = discs[i];
-    //         }
-    //         qtyOrdered += discs.length;
-    //         System.out.println("Discs has been added sucessfully");
-    //     } else System.out.println("Cannot add DVD, only " + (MAX_NUMBERS_ORDERED - qtyOrdered) + " discs can be added");
-    // }
-
     public void addDVD(DigitalVideoDisc... discs) {
         if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
             for(int i = 0; i < discs.length; i++) {
@@ -60,14 +50,14 @@ public class Cart {
                 }
             }
             if(!isExist) {
-                System.out.println("The disc does not exist");
+                System.out.println("The disc " + disc.getTitle() + " does not exist");
             } else {
                 for(int i = index; i < qtyOrdered - 1; i++) {
                     itemsInCart[i] = itemsInCart[i + 1];
                 }
                 itemsInCart[qtyOrdered - 1] = null;
                 qtyOrdered--;
-                System.out.println("The disc has been removed sucessfully");
+                System.out.println("The disc " + disc.getTitle() + " has been removed sucessfully");
             }
         } else {
             System.out.println("The cart is empty");
@@ -83,12 +73,10 @@ public class Cart {
     }
 
     public void print() {
-        System.out.println("=== Total items in cart: " + qtyOrdered + " ===");
-        System.out.println("=== All items in cart ===");
-        for(int i = 0; i < qtyOrdered; i++) {
-            System.out.println("Title: " + itemsInCart[i].getTitle());
-            System.out.println("Cost: " + itemsInCart[i].getCost());
-        }
+        System.out.println("======================= THE CURRENT CART =======================");
+        System.out.println("Total items: [" + qtyOrdered + "]");
+        for(int i = 0; i < qtyOrdered; i++) System.out.println(itemsInCart[i].toString());;
+        System.out.println("Subtotal: [" + calculateTotalCost() + "]");
     }
 
     public void viewShoppingCart() {
