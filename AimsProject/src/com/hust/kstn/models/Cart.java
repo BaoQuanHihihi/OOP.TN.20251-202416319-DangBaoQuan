@@ -19,6 +19,35 @@ public class Cart {
         }
     }
 
+    public void addDVD(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+        if(qtyOrdered < MAX_NUMBERS_ORDERED - 1) {
+            itemsInCart[qtyOrdered] = disc1;
+            itemsInCart[qtyOrdered + 1] = disc2;
+            qtyOrdered += 2;
+            System.out.println("Two discs has been added sucessfully");
+        } else System.out.println("Cannot add DVD: quantity = " + qtyOrdered);
+    }
+
+    // public void addDVD(DigitalVideoDisc[] discs) {
+    //     if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
+    //         for(int i = 0; i < discs.length; i++) {
+    //             itemsInCart[qtyOrdered + i] = discs[i];
+    //         }
+    //         qtyOrdered += discs.length;
+    //         System.out.println("Discs has been added sucessfully");
+    //     } else System.out.println("Cannot add DVD, only " + (MAX_NUMBERS_ORDERED - qtyOrdered) + " discs can be added");
+    // }
+
+    public void addDVD(DigitalVideoDisc... discs) {
+        if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
+            for(int i = 0; i < discs.length; i++) {
+                itemsInCart[qtyOrdered + i] = discs[i];
+            }
+            qtyOrdered += discs.length;
+            System.out.println("Discs has been added sucessfully");
+        } else System.out.println("Cannot add DVD, only " + (MAX_NUMBERS_ORDERED - qtyOrdered) + " discs can be added");
+    }
+
     public void removeDVD(DigitalVideoDisc disc) {
         if(qtyOrdered > 0) {
             boolean isExist = false;
