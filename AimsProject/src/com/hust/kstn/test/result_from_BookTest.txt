@@ -1,0 +1,10 @@
+Book[1][Fantasy Worlds][199000.0][Fantasy][350]
+Authors: [J. K. Rowling (1965, British author of the Harry Potter series)
+, George R. R. Martin (1948, American novelist and short story writer)
+]
+Book[2][Tuổi thơ dữ dội][150000.0][Novel][280]
+Authors: [Nguyễn Nhật Ánh (1955, Vietnamese writer of children's literature)
+]
+J. K. Rowling (1965, British author of the Harry Potter series)
+
+George R. R. Martin (1948, American novelist and short story writer)
