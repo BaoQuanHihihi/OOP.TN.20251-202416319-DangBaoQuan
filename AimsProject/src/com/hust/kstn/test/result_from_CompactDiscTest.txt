@@ -1,0 +1,16 @@
+=== CD INFORMATION ===
+CompactDisc[1][Best Hits Collection][19.99][Pop Music]
+Artists: [Taylor Swift (1989, American singer-songwriter), Ariana Grande (1993, American pop star)]
+Directors: [John Cena (1977, Famous director), Michael Bay (1965, Action movie director)]
+Track: [(Intro, 30), (Love Story, 240), (Dangerous Woman, 215)]
+=== PLAY CD ===
+Playing CD: Best Hits Collection
+Total length: 485 seconds
+Playing track: Intro (30)
+Playing track: Love Story (240)
+Playing track: Dangerous Woman (215)
+
+
+After adding new track:
+Total length: 685
+Total length: 445

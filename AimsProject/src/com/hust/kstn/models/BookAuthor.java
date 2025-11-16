@@ -25,6 +25,6 @@ public class BookAuthor {
     public String toString() {
         return this.fullName + " ("
                 + this.yearOfBirth + ", "
-                + this.shortBiography + ")\n";
+                + this.shortBiography + ")";
     }
 }
