@@ -1,0 +1,4 @@
+Chuyện gì xảy ra khi thêm phương thức này, tại sao? Bạn lựa chọn phương án nào để giải quyết?
+
+
+Khi làm vậy thì sẽ báo lỗi là "Duplicate method addDVD(DigitalVideoDisc[]) in type Cart" (trùng phương thức), lý do là khi truyền variable arguments (varargs), bản chất là ta đang truyền vào 1 mảng, và có thể thao tác bên trong method đó y hệt như với mảng, đối với trường hợp này thì vararg sẽ linh hoạt hơn, vì vừa có thể truyền 1 lượng tùy ý các objects kiểu DigitalVideoDisc làm tham số, vừa có thể truyền vào 1 mảng có kiểu là DigitalVideoDisc, rất linh hoạt. Trong trường hợp này em sẽ chọn phương thức addDVD(DigitalVideoDisc... discs)
