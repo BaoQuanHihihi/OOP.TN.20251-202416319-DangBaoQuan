@@ -1,0 +1,6 @@
+The disc Star Wars has been added sucessfully to store
+The disc Aladdin has been added sucessfully to store
+The disc The Godfather has been added sucessfully to store
+The disc Inception has been added sucessfully to store
+The disc Star Wars already exist
+The disc The Godfather already exist
