@@ -1,0 +1,30 @@
+Discs has been added sucessfully
+Id: 2
+Title: Star Wars
+Category: Science Fiction
+Director: George Lucas
+Length: 124
+Cost: 24.95
+==================
+Id: 3
+Title: Aladdin
+Category: Animation
+Director: John Musker
+Length: 90
+Cost: 18.99
+==================
+Id: 4
+Title: The Godfather
+Category: Crime
+Director: Francis Coppola
+Length: 175
+Cost: 22.5
+==================
+Id: 1
+Title: The Lion King
+Category: Animation
+Director: Roger Allers
+Length: 87
+Cost: 19.95
+==================
+Total cost: 86.39

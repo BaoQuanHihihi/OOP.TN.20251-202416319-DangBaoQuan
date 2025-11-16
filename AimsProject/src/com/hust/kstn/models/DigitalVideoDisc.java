@@ -2,6 +2,8 @@ package com.hust.kstn.models;
 
 public class DigitalVideoDisc {
     //attributes
+    private static int nbDigitalVideoDiscs = 0;
+
     private int id;
     private String title;
     private String category;
@@ -11,19 +13,27 @@ public class DigitalVideoDisc {
 
     //constructors
     public DigitalVideoDisc() {
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String title) {
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
         this.title = title;
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
         this.title = title;
         this.category = category;
         this.cost = cost;
     }
 
     public DigitalVideoDisc(String title, String category, String director, float cost) {
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
         this.title = title;
         this.category = category;
         this.director = director;
@@ -31,6 +41,8 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
         this.title = title;
         this.category = category;
         this.director = director;
@@ -38,14 +50,14 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
-    public DigitalVideoDisc(int id, String title, String category, String director, int length, float cost) {
-        this.id = id;
-        this.title = title;
-        this.category = category;
-        this.director = director;
-        this.length = length;
-        this.cost = cost;
-    }
+    // public DigitalVideoDisc(int id, String title, String category, String director, int length, float cost) {
+    //     this.id = id;
+    //     this.title = title;
+    //     this.category = category;
+    //     this.director = director;
+    //     this.length = length;
+    //     this.cost = cost;
+    // }
 
     
     //methods
