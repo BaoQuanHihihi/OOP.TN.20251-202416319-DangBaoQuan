@@ -1,0 +1,45 @@
+Tại sao những đường dẫn trên nên được thêm vào .gitignore (nếu không thêm thì sao)?
+
+Trả lời:
++ .settings: đây là folder được eclipse tạo ra để lưu cấu hình project trên máy, nó khác nhau giữa mỗi máy vì mỗi máy có version và plugin khác nhau, và nếu commit lên git và clone về máy khác thì dễ gây xung đột
++ bin: đây là folder chứa file .class được sinh ra khi build, nó không cần thiết vì khi làm trên máy khác thì có thể build lại được, cái quan trọng là code chứ không phải mấy file này
++ .classpath và .project: đây cũng là 2 file cấu hình riêng của Eclipse, vì các file này phụ thuộc vào máy, và dễ gây xung đột cho người dùng IDE khác nên phải gitignore
+
+
+
+
+
+
+
+
+Nếu sử dụng những công cụ khác để lập trình Java (như IntelliJ IDEA hoặc VSCode), những đường dẫn nào sẽ được thêm vào .gitignore?
+
+Nếu dùng VSCode, cần thêm những file này:
+.vscode/
+bin/
+out/
+
+Lý do:
++ .vscode: đây là file cấu hình của vs code dành riêng cho project, nó không liên quan gì đến source code để có thể commit cả, và khi làm trên máy khác hoặc IDE khác, thì nó cũng không dùng để làm gì
++ bin: như giải thích ở trên, folder này chứa các file .class do compiler sinh ra, khi làm trên máy khác có thể compile lại được nên không cần quan tâm
++ out: gần giống bin nhưng là thư mục do IDE sinh ra, chứa các kết quả build, nên phải git ignore
+
+
+
+
+
+
+
+
+
+
+Trong trường hợp bạn đã lỡ commit các file tạm lên Git, nhưng sau đó bạn đã thêm chúng vào .gitignore và muốn Git ngừng theo dõi chúng mà không xóa khỏi máy, bạn sẽ cần thực hiện những thao tác nào?
+
+Bước 1: Thêm các đường dẫn cần thiết vào gitignore
+Bước 2:
+    git rm -r --cached .
+    git add .
+    git commit -m "Ngung theo doi file"
+
+Giải thích lệnh git rm -r --cached . : Vì gitignore chỉ có tác dụng là ngăn git theo dõi những file mới, mà những thứ mình vừa thêm vào thì đã được tạo trước đó, nên lệnh này làm cho git ngừng theo dõi các file mà nó đang theo dõi, và lệnh git add sau chỉ giúp theo dõi những file không nằm trong gitignore
+
