@@ -28,16 +28,6 @@ public class Cart {
         } else System.out.println("Cannot add DVD: quantity = " + qtyOrdered);
     }
 
-    // public void addDVD(DigitalVideoDisc[] discs) {
-    //     if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
-    //         for(int i = 0; i < discs.length; i++) {
-    //             itemsInCart[qtyOrdered + i] = discs[i];
-    //         }
-    //         qtyOrdered += discs.length;
-    //         System.out.println("Discs has been added sucessfully");
-    //     } else System.out.println("Cannot add DVD, only " + (MAX_NUMBERS_ORDERED - qtyOrdered) + " discs can be added");
-    // }
-
     public void addDVD(DigitalVideoDisc... discs) {
         if(qtyOrdered + discs.length < MAX_NUMBERS_ORDERED + 1) {
             for(int i = 0; i < discs.length; i++) {
