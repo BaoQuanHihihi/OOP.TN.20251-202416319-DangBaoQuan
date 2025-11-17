@@ -43,6 +43,6 @@ public class Test {
         cd.addTrack(newTrack);
 
         System.out.println("\nAfter adding new track:");
-        System.out.println("Total length: " + cd.totalLength());
+        System.out.println("Total length: " + cd.getLength());
     }
 }

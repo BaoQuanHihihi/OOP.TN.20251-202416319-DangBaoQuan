@@ -4,7 +4,7 @@ public class Store {
     // attributes
     private static final int MAX_NUMBERS = 100;
     private int currentQuantity = 0;
-    DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBERS];
+    private DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBERS];
 
     // methods
     public void addDVD(DigitalVideoDisc disc) {

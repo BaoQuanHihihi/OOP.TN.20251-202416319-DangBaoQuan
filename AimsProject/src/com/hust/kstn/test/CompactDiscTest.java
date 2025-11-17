@@ -43,9 +43,11 @@ public class CompactDiscTest {
         cd.addTrack(newTrack);
 
         System.out.println("\nAfter adding new track:");
-        System.out.println("Total length: " + cd.totalLength());
+        cd.playDemoCD();
 
         cd.removeTrack(t2);
-        System.out.println("Total length: " + cd.totalLength());
+        cd.playDemoCD();
+
+        System.out.println(cd);
     }
 }
