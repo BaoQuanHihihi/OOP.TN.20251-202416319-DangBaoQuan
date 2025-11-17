@@ -1,0 +1,31 @@
+Tại sao sau khi chạy phương thức swap(s1,s2) thì tên của hai học sinh vẫn không thay đổi? Từ đó, Java là ngôn ngữ truyền tham trị hay truyền tham chiếu?
+
+Vì khi chạy hàm swap, java sẽ tự động tạo 2 biến khác với s1 và s2 nhưng có cùng giá trị với s1 và s2 (là giá trị địa chỉ của 2 objects), và khi thay đổi giá trị của 2 biến đó thì chỉ có 2 biến đó thay đổi, chứ s1 và s2 vẫn không ảnh hưởng gì, vậy nên khi chạy hàm swap đó thì tên và ID của 2 học sinh vẫn không thay đổi. Vì khi chạy swap thì tạo ra 2 biến có giá trị y hệt như s1 và s2 nên java là ngôn ngữ truyền tham trị, giá trị ở đây là tham chiếu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bạn làm thế nào để phương thức swap hoạt động (thật sự tráo đổi thông tin của hai đối tượng được truyền vào)?
+
+Vì 2 thuộc tính là private, nên có 1 cách là thêm 2 phương thức setter vào class Student, và trong hàm swap thì hoán đổi giá trị của name và ID như bình thường vì đã có tham chiếu và khi gọi các hàm getter và setter thì gọi đến chính đối tượng mà ta đang xét, nên nó thay đổi thực sự
+
+
+
+
+
+
+
+
+
+
+
+Vẽ sơ đồ minh họa cho các vùng nhớ stack và heap trong trường hợp này để chứng minh cách bạn đưa ra đã hoạt động đúng.
