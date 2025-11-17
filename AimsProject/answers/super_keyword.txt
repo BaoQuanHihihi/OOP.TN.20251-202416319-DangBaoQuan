@@ -1,0 +1,16 @@
+Hãy nêu ý nghĩa của từ khóa super trong ví dụ cho mã nguồn của lớp Book ở phía trên
+
+Trong constructor của lớp Book, từ khóa super có tác dụng gọi lên constructor của lớp cha để tránh viết lại mã nguồn, và trong method toString, từ khóa super cũng có tác dụng gọi lên toString của lớp cha để tránh phải viết lại mã nguồn, gây ra trùng lặp và xấu mã nguồn
+
+
+
+
+
+
+
+
+
+
+Tại sao java chỉ hỗ trợ đơn kế thừa (mà không phải đa kế thừa như những ngôn ngữ lâp trình khác như C++)?
+
+Vì nếu kế thừa từ nhiều lớp, nếu 2 lớp cha có chung 1 phương thức (chữ kí giống hệt nhau, có thể nội dung bên trong khác nhau) thì phải thiết kế sao cho có thể tránh được trường hợp đó, nếu không thì khi tạo instance với lớp con và gọi phương thức đó, sẽ không biết chọn cái nào. Vậy nên để đơn giản hóa thì java không hỗ trợ đa kế thừa mà lại có thêm 1 cái gọi là interface, trong interface đó chỉ có các phương thức mà không có nội dung bên trong, nó để dành cho các lớp con khi implement interface đó. Dễ hiểu khi làm vậy thì sẽ tránh được hiện tượng không biết chọn cái nào, vì không có nội dung bên trong.
